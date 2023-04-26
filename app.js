@@ -1,6 +1,8 @@
 const { Client, GatewayIntentBits, Partials, EmbedBuilder } = require('discord.js');
 const params = require('./commands/dog-command.js')
 const dotenv = require('dotenv')
+const keepalive = require("./server.js")
+
 
 dotenv.config()
 
@@ -78,3 +80,4 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.login(BOT_TOKEN);
+keepalive()
