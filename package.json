@@ -1,18 +1,29 @@
 {
-  "name": "discord-webhook",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "type": "commonjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js": "^14.9.0",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "node-fetch": "^3.3.1"
-  }
+    "name": "discord-webhook",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "commonjs",
+    "scripts": {
+        "start": "npm run app.js",
+        "start:dev": "nodemon app.js",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write ."
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^14.9.0",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "node-fetch": "^3.3.1"
+    },
+    "devDependencies": {
+        "eslint": "^8.39.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "nodemon": "^2.0.22",
+        "prettier": "^2.8.8"
+    }
 }
