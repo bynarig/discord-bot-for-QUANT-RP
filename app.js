@@ -9,7 +9,7 @@ const BOT_TOKEN = process.env.BOT_TOKEN_TEST
 
 const commandGuildId = process.env.COMMAND_GUILD_ID // ID сервера для роботи бота лише на певному сервері
 
-const channelID = process.env.CHANNEL_ID // Replace with the ID of the specific channel you want the bot to work in
+const channelID = process.env.CHANNEL_ID // Канал для доган
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds],
@@ -24,7 +24,7 @@ client.on("interactionCreate", async (interaction) => {
     // Check if command was sent in the specific channel
     if (interaction.channelId !== channelID) return
 
-    commandsInteractionInit(interaction)
+    commandsInteractionInit(interaction, channelID)
 })
 
 client.login(BOT_TOKEN)
